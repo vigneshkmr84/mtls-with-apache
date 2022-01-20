@@ -1,0 +1,47 @@
+curl -ivk "https://localhost/protected/protected.html"                                                                                                  ✔
+❯ curl -ivk "https://localhost/protected/protected.html"
+*   Trying ::1:443...
+* Connected to localhost (::1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=US; ST=Texas; L=Dallas; O=learning; OU=engineering; CN=learning.org; emailAddress=my@learning.ord
+*  start date: Jan 19 21:16:48 2022 GMT
+*  expire date: Jan 17 21:16:48 2032 GMT
+*  issuer: C=US; ST=Texas; L=Austin; O=learning; OU=engineering; CN=learning.org; emailAddress=my@learning.org
+*  SSL certificate verify ok.
+> GET /protected/protected.html HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.77.0
+> Accept: */*
+>
+* TLSv1.2 (IN), TLS handshake, Hello request (0):
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS handshake, Request CERT (13):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS handshake, Certificate (11):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS alert, handshake failure (552):
+* LibreSSL SSL_read: error:1401E410:SSL routines:CONNECT_CR_FINISHED:sslv3 alert handshake failure, errno 0
+* Closing connection 0
+curl: (56) LibreSSL SSL_read: error:1401E410:SSL routines:CONNECT_CR_FINISHED:sslv3 alert handshake failure, errno 0
