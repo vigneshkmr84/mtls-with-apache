@@ -1,0 +1,79 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying ::1:443...
+* Connected to localhost (::1) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [223 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [108 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [1175 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [300 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [37 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES256-GCM-SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: C=US; ST=Texas; L=Dallas; O=learning; OU=engineering; CN=learning.org; emailAddress=my@learning.ord
+*  start date: Jan 19 21:16:48 2022 GMT
+*  expire date: Jan 17 21:16:48 2032 GMT
+*  issuer: C=US; ST=Texas; L=Austin; O=learning; OU=engineering; CN=learning.org; emailAddress=my@learning.org
+*  SSL certificate verify ok.
+> GET /unprotected/unprotected.html HTTP/1.1
+> Host: localhost
+> User-Agent: curl/7.77.0
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Date: Fri, 21 Jan 2022 08:29:34 GMT
+< Server: Apache/2.4.52 (Unix) OpenSSL/1.1.1k
+< Last-Modified: Wed, 19 Jan 2022 20:05:03 GMT
+< ETag: "9b-5d5f4e6ba32fa"
+< Accept-Ranges: bytes
+< Content-Length: 155
+< Content-Type: text/html
+< 
+{ [155 bytes data]
+100   155  100   155    0     0   5159      0 --:--:-- --:--:-- --:--:--  7045
+* Connection #0 to host localhost left intact
+HTTP/1.1 200 OK
+Date: Fri, 21 Jan 2022 08:29:34 GMT
+Server: Apache/2.4.52 (Unix) OpenSSL/1.1.1k
+Last-Modified: Wed, 19 Jan 2022 20:05:03 GMT
+ETag: "9b-5d5f4e6ba32fa"
+Accept-Ranges: bytes
+Content-Length: 155
+Content-Type: text/html
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Unsecured...</title>
+</head>
+<body>
+
+<h1>Hello Welcome All. This page is open to everyone:)</h1>
+
+
+</body>
+</html>
+
+
+
